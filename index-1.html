@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0879d1">
+  <meta name="description" content="Instalación de cámaras de seguridad para hogares y negocios. Consulta nuestros paquetes y cotiza por WhatsApp.">
+  <title>Instalación de Cámaras de Seguridad</title>
+  <style>
+    :root {
+      --blue: #0879d1;
+      --blue-dark: #064b87;
+      --blue-light: #e8f5ff;
+      --ink: #183247;
+      --muted: #5d6d7b;
+      --white: #fff;
+      --gray: #f3f6f9;
+      --green: #20bd5a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--gray);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .topbar {
+      background: var(--blue-dark);
+      color: #fff;
+      text-align: center;
+      padding: 8px 14px;
+      font-size: .9rem;
+    }
+    header {
+      color: #fff;
+      text-align: center;
+      padding: 58px 20px 50px;
+      background: linear-gradient(135deg, #0759a6, #079de5);
+    }
+    .brand-mark {
+      width: 72px; height: 72px; margin: 0 auto 16px;
+      display: grid; place-items: center;
+      border: 2px solid rgba(255,255,255,.7);
+      border-radius: 22px;
+      font-size: 2.1rem;
+      background: rgba(255,255,255,.12);
+    }
+    header h1 { max-width: 820px; margin: 0 auto 12px; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; }
+    header p { max-width: 680px; margin: 0 auto 24px; font-size: 1.08rem; color: #eef8ff; }
+    .button {
+      display: inline-block; text-decoration: none; font-weight: 700;
+      padding: 13px 22px; border-radius: 999px; transition: transform .15s, filter .15s;
+    }
+    .button:hover { transform: translateY(-2px); filter: brightness(.97); }
+    .button-white { background: #fff; color: var(--blue-dark); }
+    .button-whatsapp { background: var(--green); color: #062c16; }
+    .section { max-width: 1120px; margin: 0 auto; padding: 48px 20px; }
+    .intro {
+      text-align: center; background: #fff; padding: 34px 20px;
+      border-bottom: 1px solid #e0e9f0;
+    }
+    .intro h2 { color: var(--blue-dark); font-size: clamp(1.5rem, 4vw, 2.15rem); margin: 0 0 8px; }
+    .intro p { max-width: 760px; margin: 0 auto; color: var(--muted); }
+    .section-title { text-align: center; margin: 0 0 8px; color: var(--blue-dark); font-size: clamp(1.7rem, 4vw, 2.25rem); }
+    .section-subtitle { text-align: center; color: var(--muted); margin: 0 auto 28px; max-width: 720px; }
+    .photo {
+      display: block; width: 100%; height: 310px; object-fit: cover;
+      background: #dbeaf5;
+    }
+    .photo-caption { text-align: center; color: var(--muted); font-size: .82rem; padding: 7px 14px; background: #fff; }
+    .prices {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)); gap: 18px;
+    }
+    .card {
+      background: #fff; border: 1px solid #dce7ef; border-top: 5px solid var(--blue);
+      border-radius: 16px; padding: 24px 20px; text-align: center;
+      box-shadow: 0 8px 24px rgba(20, 65, 100, .06);
+    }
+    .card-icon { font-size: 2rem; }
+    .card h3 { color: var(--blue-dark); margin: 7px 0 4px; font-size: 1.25rem; }
+    .price { color: var(--blue); font-size: 2rem; font-weight: 800; line-height: 1.3; margin: 10px 0; }
+    .card p { color: var(--muted); margin: 0; font-size: .95rem; }
+    .note { text-align: center; color: var(--muted); font-size: .9rem; margin: 20px auto 0; max-width: 760px; }
+    .benefits-wrap { background: var(--blue-light); }
+    .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 15px; }
+    .benefit { background: #fff; border-radius: 12px; padding: 19px; border: 1px solid #d5eafa; }
+    .benefit strong { display: block; color: var(--blue-dark); margin-bottom: 4px; }
+    .benefit span { color: var(--muted); font-size: .94rem; }
+    .cta {
+      margin: 0; padding: 48px 20px; text-align: center; color: #fff;
+      background: linear-gradient(135deg, #064b87, #0879d1);
+    }
+    .cta h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin: 0 0 8px; }
+    .cta p { max-width: 650px; margin: 0 auto 22px; color: #eaf6ff; }
+    footer { background: #102b40; color: #d9e7f1; text-align: center; padding: 22px 16px; font-size: .9rem; }
+    footer p { margin: 4px; }
+    .whatsapp-float {
+      position: fixed; right: 16px; bottom: 16px; z-index: 5;
+      background: var(--green); color: #052c15; text-decoration: none;
+      font-weight: 800; padding: 12px 16px; border-radius: 999px;
+      box-shadow: 0 5px 18px rgba(0,0,0,.2);
+    }
+    @media (max-width: 520px) {
+      header { padding: 42px 18px; }
+      .photo { height: 230px; }
+      .section { padding: 38px 16px; }
+      .whatsapp-float { right: 10px; bottom: 10px; font-size: .9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Instalación de cámaras para hogares y negocios</div>
+
+  <header>
+    <div class="brand-mark" aria-hidden="true">📹</div>
+    <h1>Instalación de cámaras de seguridad</h1>
+    <p>Soluciones de vigilancia para ayudarte a cuidar tu hogar, tu negocio y lo que más valoras.</p>
+    <a class="button button-white" href="#precios">Consultar paquetes</a>
+  </header>
+
+  <section class="intro">
+    <h2>¿Cuánto vale la tranquilidad de tu familia?</h2>
+    <p>Conoce las opciones de instalación y elige la que se adapte a tu espacio y presupuesto. Solicita una cotización personalizada sin compromiso.</p>
+  </section>
+
+  <img
+    class="photo"
+    src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1600&q=85"
+    alt="Sistema de cámaras de videovigilancia"
+    loading="eager">
+  <div class="photo-caption">Imagen ilustrativa de un sistema de videovigilancia.</div>
+
+  <main>
+    <section class="section" id="precios">
+      <h2 class="section-title">Paquetes de instalación</h2>
+      <p class="section-subtitle">Precios de mano de obra. El costo de las cámaras se cobra por separado.</p>
+
+      <div class="prices">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📷</div>
+          <h3>1 cámara</h3>
+          <div class="price">$250 MXN</div>
+          <p>Instalación de una cámara<br>+ costo de la cámara</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📷</div>
+          <h3>2 cámaras</h3>
+          <div class="price">$450 MXN</div>
+          <p>Instalación de dos cámaras<br>+ costo de las cámaras</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📷</div>
+          <h3>3 cámaras</h3>
+          <div class="price">$600 MXN</div>
+          <p>Instalación de tres cámaras<br>+ costo de las cámaras</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📷</div>
+          <h3>4 cámaras</h3>
+          <div class="price">$800 MXN</div>
+          <p>Instalación de cuatro cámaras<br>+ costo de las cámaras</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📷</div>
+          <h3>8 cámaras</h3>
+          <div class="price">$1,500 MXN</div>
+          <p>Instalación de ocho cámaras<br>+ costo de las cámaras</p>
+        </article>
+      </div>
+      <p class="note">El precio final puede depender de las condiciones del lugar, el cableado y los materiales necesarios. Confirma los detalles por WhatsApp antes de contratar.</p>
+    </section>
+
+    <div class="benefits-wrap">
+      <section class="section">
+        <h2 class="section-title">Vigilancia para lo que importa</h2>
+        <p class="section-subtitle">Te ayudamos a revisar qué opción puede funcionar para tu hogar o negocio.</p>
+        <div class="benefits">
+          <div class="benefit"><strong>🏠 Para tu hogar</strong><span>Identifica las áreas que deseas mantener vigiladas.</span></div>
+          <div class="benefit"><strong>🏪 Para tu negocio</strong><span>Considera accesos, entradas y zonas de atención.</span></div>
+          <div class="benefit"><strong>🧰 Cotización personalizada</strong><span>Cuéntanos qué necesitas para revisar las opciones.</span></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="cta" id="contacto">
+      <h2>¿Cuántas cámaras necesitas?</h2>
+      <p>Escríbenos por WhatsApp para solicitar tu cotización y consultar los detalles de instalación.</p>
+      <a class="button button-whatsapp"
+         href="https://wa.me/525656610237?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20la%20instalaci%C3%B3n%20de%20c%C3%A1maras%20de%20seguridad."
+         target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Instalación de Cámaras de Seguridad</strong></p>
+    <p>Atención y cotizaciones por WhatsApp</p>
+    <p>© <span id="year">2026</span> · Todos los derechos reservados</p>
+  </footer>
+
+  <a class="whatsapp-float"
+     href="https://wa.me/525656610237?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20la%20instalaci%C3%B3n%20de%20c%C3%A1maras%20de%20seguridad."
+     target="_blank" rel="noopener noreferrer" aria-label="Cotizar por WhatsApp">WhatsApp</a>
+</body>
+</html>
